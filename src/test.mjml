@@ -1,0 +1,26 @@
+<mjml>
+  <mj-head>
+  <mj-title></mj-title>
+  <mj-attributes>
+  
+  </mj-attributes>
+  </mj-head>
+  <mj-body>
+  <mj-container>
+
+  <mj-section>
+  <mj-column>
+    <mj-text align='left'>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit
+    </mj-text>
+  </mj-column>
+  <mj-column>
+    <mj-text align='right'>
+      <a href='#'>read more</a>
+    </mj-text>
+  </mj-column>
+  </mj-section>
+
+  </mj-container>
+  </mj-body>
+</mjml>
