@@ -8,24 +8,13 @@
   <mj-body>
   <mj-container>
 
-  <mj-section>
-  <mj-column>
-    <mj-text align='left'>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-    </mj-text>
-    <mj-text>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-    </mj-text>
-    <mj-text>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-    </mj-text>
-  </mj-column>
-  <mj-column>
-    <mj-text align='right'>
-      <a href='#'>Read more</a>
-    </mj-text>
-  </mj-column>
-  </mj-section>
+    <mj-hero>
+      <mj-hero-content>
+        <mj-text>
+          On Air
+        </mj-text>
+      </mj-hero-content>
+    </mj-hero>
 
   </mj-container>
   </mj-body>
