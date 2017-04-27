@@ -2,6 +2,7 @@ import gulp from 'gulp';
 import del from 'del';
 import browserSync from 'browser-sync';
 import mjml from 'gulp-mjml';
+import notify from 'gulp-notify';
 
 const paths = {
   dist: 'dist/',
@@ -31,6 +32,12 @@ const clean = () => del([paths.dist]);
 const build = () => {
   return gulp.src(paths.src + '*.mjml')
     .pipe(mjml())
+    .on('error', notify.onError(function(err) {
+      return {
+        title: 'mjml',
+        message: err.message
+      }
+    }))
     .pipe(gulp.dest(paths.dist))
 };
 
