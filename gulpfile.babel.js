@@ -16,12 +16,12 @@ const paths = {
 
 const server = browserSync.create();
 
-function reload(done) {
+const reload = (done) => {
   server.reload();
   done();
 }
 
-function serve(done) {
+const serve = (done) => {
   server.init({
     server: { baseDir: paths.dist },
     ui: false,
