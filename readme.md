@@ -1,6 +1,7 @@
 # careex
 
-A starter-kit for [mjml](https://mjml.io/documentation/)
+A starter-kit for [mjml](https://mjml.io/documentation/)   
+Powered by [pug](https://pugjs.org/api/getting-started.html) and gulp
 
 ### Get your copy
 
