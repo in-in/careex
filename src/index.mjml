@@ -1,10 +1,5 @@
 <mjml>
-  <mj-head>
-  <mj-title></mj-title>
-  <mj-attributes>
-  
-  </mj-attributes>
-  </mj-head>
+  <mj-include path="src/external/head.mjml" />
   <mj-body>
   <mj-container>
 
