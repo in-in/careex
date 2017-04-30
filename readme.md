@@ -13,3 +13,9 @@ git clone git@github.com:in-in/careex.git project && cd project
 ```bash
 npm start
 ```
+
+### Build project
+
+```bash
+npm run dist
+```
