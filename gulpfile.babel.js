@@ -1,9 +1,11 @@
 import gulp from 'gulp';
 import del from 'del';
 import browserSync from 'browser-sync';
+import pug from 'gulp-pug';
 import mjml from 'gulp-mjml';
 import notify from 'gulp-notify';
 import imagemin from 'gulp-imagemin';
+import plumber from 'gulp-plumber';
 
 const paths = {
   dist: 'dist/',
@@ -41,9 +43,17 @@ const images = () => {
 };
 
 const build = () => {
-  return gulp.src(paths.src + '*.mjml')
+  return gulp.src(paths.src + '*.pug')
+    .pipe(plumber({
+      errorHandler: notify.onError(function(err) {
+        return {
+           title: err.plugin.toUpperCase(),
+           message: err.message
+        }
+      })
+    }))
+    .pipe(pug())
     .pipe(mjml())
-    .on('error', notify.onError())
     .pipe(gulp.dest(paths.dist))
 };
 
