@@ -1,8 +1,12 @@
+include blocks/variables.pug
+
 mjml
   include blocks/head.pug
   mj-body
     mj-container
-
-      mj-hero
+      mj-hero(background-color=bodyBg)
         mj-hero-content
-          mj-text On Air
+          mj-text(
+            color='#fff'
+            font-weight='700'
+            font-family='Roboto, sans-serif') On Air
