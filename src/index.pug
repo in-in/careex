@@ -4,7 +4,11 @@ mjml
   include blocks/head.pug
   mj-body
     mj-container
-      mj-hero(background-color=bodyBg)
+      mj-hero(
+        mode='fixed-height'
+        height='317px'
+        background-url=`${imagePath}picto.png`
+        background-color=bodyBg)
         mj-hero-content
           mj-text(
             color='#fff'
