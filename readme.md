@@ -20,3 +20,9 @@ npm start
 ```bash
 npm run dist
 ```
+
+### Update packages
+
+```bash
+npm run ncu
+```
