@@ -1,0 +1,30 @@
+include /variables.pug
+include /social.pug
+
+mjml
+
+  include /head.pug
+
+  mj-body
+
+    mj-hero(
+      mode='fixed-height'
+      height='317px'
+      background-url=imagePath + 'picto.png'
+      background-color=bgBody)
+
+      mj-text(
+        color='#fff'
+        font-weight='700'
+        font-family='Roboto, sans-serif') On Air
+
+    mj-section
+
+      mj-column
+        mj-text(mj-class='foobar') foobar
+
+      mj-column
+        mj-text(css-class='baz') baz
+
+      mj-column
+        +social(['dribbble', 'facebook', 'twitter'])

@@ -3,11 +3,10 @@
   "version": "2.0.0",
   "description": "Project template for email based on mjml",
   "scripts": {
-    "dist": "gulp dist",
+    "dist": "NODE_ENV='production' gulp",
     "ncu": "ncu",
-    "start": "gulp dev"
+    "start": "gulp"
   },
-  "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.3",
     "del": "^3.0.0",

@@ -1,0 +1,6 @@
+@import 'reset';
+@import 'variables';
+
+.baz {
+  background-color: darken($mainColor, 6%);
+}

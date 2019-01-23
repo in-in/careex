@@ -1,12 +1,12 @@
 # careex
 
-A starter-kit for [mjml](https://mjml.io/documentation/)   
-Powered by [pug](https://pugjs.org/api/getting-started.html) and gulp
+A starter-kit for [mjml](https://github.com/mjmlio/mjml)  
+Powered by [gulp](https://github.com/gulpjs/gulp)
 
 ### Get your copy
 
 ```bash
-git clone git@github.com:in-in/careex.git project && cd project
+git clone git@github.com:in-in/careex.git new_project && cd new_project
 ```
 
 ### Run and watch

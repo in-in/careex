@@ -1,0 +1,14 @@
+mixin social(list)
+
+  mj-social(
+    icon-size='35px'
+    inner-padding='5px'
+    line-height='37px'
+    padding='0px'
+    border-radius='0')
+
+    each item in list
+      mj-social-element(
+        name=item
+        src=`${imagePath}social/${item}.png`
+        background-color=transparentColor)
