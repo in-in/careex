@@ -1,0 +1,10 @@
+%container {
+  max-width: $containerWidth + px !important;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @include mq {
+    padding-left: 80px !important;
+    padding-right: 80px !important;
+  }
+}

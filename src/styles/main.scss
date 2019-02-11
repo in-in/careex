@@ -1,6 +1,8 @@
-@import 'reset';
 @import 'variables';
+@import 'helpers';
 
-.baz {
-  background-color: darken($mainColor, 6%);
-}
+@import 'button/button';
+@import 'container/container';
+@import 'footer/footer';
+@import 'heading/heading';
+@import 'logo/logo';

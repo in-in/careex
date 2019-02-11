@@ -1,0 +1,17 @@
+include /social/social.pug
+include /spacer/spacer.pug
+
+mixin footer()
+
+  - const className = 'footer'
+
+  mj-section(css-class=className)
+
+    mj-column(width='100%')
+      +spacer({cssClass: className + '__spacer-top'})
+
+    mj-column(width='100%')
+
+      +social(['facebook', 'twitter', 'pinterest', 'dribbble'])
+
+      +spacer({cssClass: className + '__spacer'})

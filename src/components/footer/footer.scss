@@ -1,0 +1,13 @@
+.footer {
+  @extend %container;
+  height: 352px !important;
+  max-height: 352px !important;
+
+  &__spacer {
+    padding-top: 80px !important;
+
+    &-top {
+      padding-top: 80px !important;
+    }
+  }
+}

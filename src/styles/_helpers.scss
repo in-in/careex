@@ -1,0 +1,9 @@
+@mixin mq {
+  @media all and (min-width: 480px) {
+    @content;
+  }
+}
+
+@function rwd($target, $context) {
+  @return percentage($target / $context);
+}
