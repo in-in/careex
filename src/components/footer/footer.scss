@@ -1,7 +1,6 @@
 .footer {
   @extend %container;
-  height: 128px !important;
-  max-height: 128px !important;
+  min-height: 128px !important;
   background-color: $elephant !important;
 
   &__spacer {
