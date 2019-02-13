@@ -1,13 +1,14 @@
 mixin social(list)
 
+  - const className = 'social'
+
   mj-social(
-    icon-size='30px'
-    inner-padding='8px'
-    padding='0px'
-    border-radius='15px')
+    css-class=className
+    icon-size='32px'
+    border-radius='16px')
 
     each item in list
       mj-social-element(
+        css-class=className + '__element'
         name=item
-        src=`${imagePath}social/${item}.png`
-        background-color=transparentColor)
+        src=`${imagePath}social/${item}.png`)

@@ -1,0 +1,11 @@
+.social {
+  &__element {
+    > td {
+      padding: 8px !important;
+
+      > table {
+        background-color: $elephant !important;
+      }
+    }
+  }
+}

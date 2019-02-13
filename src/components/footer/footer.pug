@@ -8,10 +8,22 @@ mixin footer()
   mj-section(css-class=className)
 
     mj-column(width='100%')
-      +spacer({cssClass: className + '__spacer-top'})
+
+      +spacer({cssClass: className + '__spacer'})
+
+      +social(['facebook', 'instagram', 'pinterest', 'dribbble'])
+
+      +spacer({cssClass: className + '__spacer'})
 
     mj-column(width='100%')
 
-      +social(['facebook', 'twitter', 'pinterest', 'dribbble'])
+      mj-text(css-class=className + '__text')
+        p
+          | You can 
+          a(href='#0') update your preferences
+          |  or 
+          a(href='#0') unsubscribe
+          |  from this list
 
-      +spacer({cssClass: className + '__spacer'})
+      mj-text(css-class=className + '__text')
+        p Copyright © All rights reserved.

@@ -1,13 +1,25 @@
 .footer {
   @extend %container;
-  height: 352px !important;
-  max-height: 352px !important;
+  height: 128px !important;
+  max-height: 128px !important;
+  background-color: $elephant !important;
 
   &__spacer {
-    padding-top: 80px !important;
+    padding-top: 16px !important;
+  }
 
-    &-top {
-      padding-top: 80px !important;
+  &__text {
+    p,
+    a {
+      color: $whiteSmoke !important;
+    }
+
+    p {
+      margin: 0 !important;
+      padding-bottom: 8px !important;
+      font-size: 12px !important;
+      line-height: 130% !important;
+      text-align: center;
     }
   }
 }
