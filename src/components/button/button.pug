@@ -1,4 +1,7 @@
-mixin button(text)
+mixin button(opts={})
+
+  - const className = 'button'
+
   mj-button(
-    css-class='button'
-    href='#0')&attributes(attributes)= text
+    css-class=opts.cssClass ? className + ' ' + opts.cssClass : className
+    href='#0')&attributes(attributes)= opts.text

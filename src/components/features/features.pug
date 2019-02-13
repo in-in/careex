@@ -1,5 +1,6 @@
 include /spacer/spacer.pug
 include /paragraph/paragraph.pug
+include /button/button.pug
 
 mixin features()
 
@@ -20,11 +21,19 @@ mixin features()
     mj-column(
       css-class=className + '__col ' + className + '__col-r'
       width='50%')
+
       mj-image(src=`${imagePath}features3.png`)
 
       +spacer({cssClass: className + '__spacer'})
 
     mj-column(width='100%')
+
       +paragraph({text: 'MJML is a markup language designed to reduce the pain of coding a responsive email.'})
+
       +paragraph({text: 'MJML has been designed with responsiveness in mind. The abstraction it offers guarantee you to always be up-to-date with the industry practices and responsive. Email clients update their specs and requirements regularly, but we geek about that stuff'})
+
+      +button({text: 'Find Out More'})
+
+      +spacer({cssClass: className + '__spacer'})
+
       mj-divider(css-class=className + '__hr')
