@@ -4,5 +4,9 @@
 @import 'button/button';
 @import 'container/container';
 @import 'footer/footer';
-@import 'heading/heading';
+@import 'header/header';
 @import 'logo/logo';
+
+.body {
+  background-color: $colorWhite !important;
+}

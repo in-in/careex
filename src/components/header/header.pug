@@ -1,0 +1,13 @@
+include /logo/logo.pug
+
+mixin header()
+
+  - const className = 'header'
+
+  mj-section(css-class=className)
+
+    mj-column(width='100%')
+      +spacer({cssClass: className + '__spacer'})
+      +logo({
+        text: 'Careex'
+      })
