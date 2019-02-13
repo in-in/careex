@@ -1,0 +1,33 @@
+.features {
+  @extend %container;
+
+  &__col {
+    &-l {
+      > table tbody tr td {
+        padding-bottom: 24px;
+
+        @include mq {
+          padding-right: 20px;
+          padding-bottom: 0px !important;
+        }
+      }
+    }
+
+    &-r {
+      > table tbody tr td {
+        @include mq {
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+
+  &__spacer {
+    padding-top: 24px !important;
+  }
+
+  &__hr p {
+    border-color: $elephant !important;
+    border-width: 1px !important;
+  }
+}
