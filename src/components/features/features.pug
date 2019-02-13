@@ -32,8 +32,11 @@ mixin features()
 
       +paragraph({text: 'MJML has been designed with responsiveness in mind. The abstraction it offers guarantee you to always be up-to-date with the industry practices and responsive. Email clients update their specs and requirements regularly, but we geek about that stuff'})
 
-      +button({text: 'Find Out More'})
-
       +spacer({cssClass: className + '__spacer'})
 
-      mj-divider(css-class=className + '__hr')
+      +button({
+        text: 'Find Out More',
+        href: 'https://github.com/in-in/careex'
+        })
+
+      +spacer({cssClass: className + '__spacer-bottom'})

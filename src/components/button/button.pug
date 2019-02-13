@@ -4,4 +4,4 @@ mixin button(opts={})
 
   mj-button(
     css-class=opts.cssClass ? className + ' ' + opts.cssClass : className
-    href='#0')&attributes(attributes)= opts.text
+    href=opts.href || '#0')&attributes(attributes)= opts.text
