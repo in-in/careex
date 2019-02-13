@@ -5,7 +5,10 @@
 @import 'container/container';
 @import 'footer/footer';
 @import 'header/header';
+@import 'heading/heading';
 @import 'logo/logo';
+@import 'subtitle/subtitle';
+@import 'title/title';
 
 .body {
   background-color: $colorWhite !important;

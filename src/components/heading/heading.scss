@@ -1,0 +1,11 @@
+.heading {
+  @extend %container;
+
+  &__spacer {
+    padding-top: 56px !important;
+
+    &-gap {
+      padding-top: 8px !important;
+    }
+  }
+}

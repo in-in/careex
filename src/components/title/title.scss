@@ -1,0 +1,14 @@
+.title {
+  h1 {
+    margin: 0 !important;
+    color: $elephant !important;
+    line-height: 150% !important;
+    font-size: 32px !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+
+    @include mq {
+      font-size: 40px !important;
+    }
+  }
+}

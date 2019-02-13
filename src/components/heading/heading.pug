@@ -1,0 +1,15 @@
+include /title/title.pug
+include /subtitle/subtitle.pug
+
+mixin heading()
+
+  - const className = 'heading'
+
+  mj-section(css-class=className)
+
+    mj-column(width='100%')
+      +spacer({cssClass: className + '__spacer'})
+      +subtitle({text: 'Write less, save time and code more efficiently'})
+      +spacer({cssClass: className + '__spacer-gap'})
+      +title({text: 'Careex responsive email'})
+      +spacer({cssClass: className + '__spacer'})
