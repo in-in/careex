@@ -4,12 +4,16 @@ const { devBuild, path } = require('./config.js');
 
 const { src, dest, series, parallel, watch } = require('gulp');
 const bs = require('browser-sync').create();
+const csso = require('postcss-csso');
 const del = require('del');
 const imagemin = require('gulp-imagemin');
 const mjml = require('gulp-mjml');
 const mjmlEngine = require('mjml');
+const mqExtract = require('postcss-mq-extract');
+const mqPacker = require('css-mqpacker');
 const notify = require('gulp-notify');
 const plumber = require('gulp-plumber');
+const postcss = require('gulp-postcss');
 const pug = require('gulp-pug');
 const sass = require('gulp-sass');
 
@@ -44,7 +48,7 @@ const template = () =>
     .pipe(plumber({ errorHandler: onError }))
     .pipe(
       pug({
-        basedir: path.templates.includes,
+        basedir: path.components,
         pretty: devBuild,
         data: {
           devBuild: devBuild
@@ -60,10 +64,34 @@ const template = () =>
     )
     .pipe(dest(path.build));
 
+const plugins = [
+  ...(devBuild
+    ? []
+    : [
+        csso({
+          forceMediaMerge: true
+        })
+      ]),
+  mqPacker({
+    sort: true
+  }),
+  mqExtract({
+    dest: path.styles.build,
+    match: '(min-width:)',
+    postfix: '_mq'
+  })
+];
+
 const styles = () =>
   src(path.styles.src)
     .pipe(plumber({ errorHandler: onError }))
-    .pipe(sass({ outputStyle: devBuild ? 'expanded' : 'compressed' }))
+    .pipe(
+      sass({
+        outputStyle: 'expanded',
+        includePaths: path.components
+      })
+    )
+    .pipe(postcss(plugins))
     .pipe(dest(path.styles.build));
 
 const images = () =>
